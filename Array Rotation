@@ -1,0 +1,35 @@
+//Sample i/p: 1 2 3 4 5 and d=2
+//o/p: 3 4 5 1 2 
+//Logic: 1st iterate for loop based on d value and assign the 1st array element value to temp
+//then iterate for loop as i=0;i<n-1;i++...swap all the elements to the previous as a[i]=a[i+1] then store a[n-1]=temp
+//then itearte for 'd' rotations
+#include<bits/stdc++.h>
+using namespace std;
+void rotateArray(int arr[],int d,int n)
+{
+	int i,j;
+	for(i=0;i<d;i++)
+	{
+		int temp=arr[0];
+		for(j=0;j<n-1;j++)
+		{
+			arr[j]=arr[j+1];
+		}
+		arr[n-1]=temp;
+	}
+}
+int main()
+{
+	int N;
+	cin>>N;
+	int d;
+	cin>>d;
+	int arr[N];
+	for(int i=0;i<N;i++)
+	    cin>>arr[i];
+	rotateArray(arr,d,N);
+	for(int i=0;i<N;i++)
+	    cout<<arr[i]<<" ";
+	cout<<endl;
+	return 0;
+}
