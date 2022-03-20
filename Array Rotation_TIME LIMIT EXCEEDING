@@ -3,6 +3,7 @@
 //Logic: 1st iterate for loop based on d value and assign the 1st array element value to temp
 //then iterate for loop as i=0;i<n-1;i++...swap all the elements to the previous as a[i]=a[i+1] then store a[n-1]=temp
 //then itearte for 'd' rotations
+//TIME LIMIT EXCEEDING
 #include<bits/stdc++.h>
 using namespace std;
 void rotateArray(int arr[],int d,int n)
